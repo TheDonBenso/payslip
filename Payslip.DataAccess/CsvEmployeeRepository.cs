@@ -12,10 +12,10 @@ namespace Payslip.DataAccess
         public IEnumerable<T> ReadRecordsFromStream<T>(Stream stream)
         {
             using (var streamReader = new StreamReader(stream))
-            using (var csvReader = new CsvReader(streamReader))
+            using (var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture))
             {
                 csvReader.Configuration.RegisterClassMap<EmployeeClassMapping>();
-                csvReader.Configuration.PrepareHeaderForMatch = header => header.Replace("_", string.Empty).ToLowerInvariant();
+              //  csvReader.Configuration.PrepareHeaderForMatch = (header, 0, header) => header.Replace("_", string.Empty).ToLowerInvariant();
                 return csvReader.GetRecords<T>().ToArray();
             }
         }
@@ -23,7 +23,7 @@ namespace Payslip.DataAccess
         {
             using (var memoryStream = new MemoryStream())
             using (var streamWriter = new StreamWriter(memoryStream))
-            using (var csvWriter = new CsvWriter(streamWriter))
+            using (var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture))
             {
                 csvWriter.WriteRecords(records);
                 streamWriter.Flush();

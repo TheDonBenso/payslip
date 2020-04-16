@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using CsvHelper.Configuration;
 using Payslip.Model;
 
@@ -12,7 +13,7 @@ namespace Payslip.DataAccess
         // ReSharper disable once UnusedMember.Global
         public EmployeeClassMapping()
         {
-            AutoMap();
+            AutoMap(CultureInfo.InvariantCulture);
             Map(x => x.SuperRate)
                 .ConvertUsing(r =>
                 {

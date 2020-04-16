@@ -12,6 +12,8 @@ using Payslip.Web.Models;
 
 namespace Payslip.Web.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class HomeController : Controller
     {
         private const string FileDownloadName = "payslips.csv";
@@ -25,13 +27,14 @@ namespace Payslip.Web.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet(Name = "Submission")]
+        public IActionResult GetSubmit()
         {
             return View(new SubmissionViewModel());
         }
 
-        [HttpPost]
-        public IActionResult Index([FromForm] SubmissionViewModel viewModel)
+        [HttpPost(Name = "PostSubmit")]
+        public IActionResult PostSubmit([FromForm] SubmissionViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -99,13 +102,14 @@ namespace Payslip.Web.Controllers
             HttpContext.Session.Set(PayslipDataSessionKey, bytes);
         }
 
-        [HttpGet]
+        [HttpGet(Name = "Download")]
         public IActionResult DownloadFile()
         {
             var bytes = HttpContext.Session.Get(PayslipDataSessionKey);
             return File(bytes, "text/csv", FileDownloadName);
         }
 
+        [HttpGet(Name = "Error")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

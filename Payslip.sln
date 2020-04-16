@@ -1,9 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payslip.Model", "Payslip.Model\Payslip.Model.csproj", "{F72763F8-2215-4864-8FD3-A28A09323D79}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D8C527D-CA6A-408A-87F3-9A7A232AA453}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
@@ -17,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payslip.Service", "Payslip.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payslip.Tests", "Payslip.Tests\Payslip.Tests.csproj", "{09EC85A1-20A6-4B53-A65F-D12C40EE6226}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payslip.Model", "ClassLibrary1\Payslip.Model.csproj", "{70831181-7A24-45E8-8712-D5C8C378D980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,18 +27,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|x64.Build.0 = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Debug|x86.Build.0 = Debug|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|x64.ActiveCfg = Release|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|x64.Build.0 = Release|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|x86.ActiveCfg = Release|Any CPU
-		{F72763F8-2215-4864-8FD3-A28A09323D79}.Release|x86.Build.0 = Release|Any CPU
 		{328EA55E-75F9-4966-8AB9-9AF5977B7488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{328EA55E-75F9-4966-8AB9-9AF5977B7488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328EA55E-75F9-4966-8AB9-9AF5977B7488}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -87,6 +75,18 @@ Global
 		{09EC85A1-20A6-4B53-A65F-D12C40EE6226}.Release|x64.Build.0 = Release|Any CPU
 		{09EC85A1-20A6-4B53-A65F-D12C40EE6226}.Release|x86.ActiveCfg = Release|Any CPU
 		{09EC85A1-20A6-4B53-A65F-D12C40EE6226}.Release|x86.Build.0 = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|x64.Build.0 = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Debug|x86.Build.0 = Debug|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|x64.ActiveCfg = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|x64.Build.0 = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|x86.ActiveCfg = Release|Any CPU
+		{70831181-7A24-45E8-8712-D5C8C378D980}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
